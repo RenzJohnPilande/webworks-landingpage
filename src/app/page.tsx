@@ -1,103 +1,120 @@
-import Image from "next/image";
+'use client'
+
+import Link from "next/link";
+import { FaCheckCircle } from "react-icons/fa";
+import { FaClock } from "react-icons/fa6";
+import { MdOutlineTimer } from "react-icons/md";
+
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="flex w-full flex-wrap items-start justify-center">
+      {/* Hero Banner */}
+      <div className="flex flex-wrap w-full justify-center items-center px-10 py-40 text-white bg-slate-950">
+        <div className="flex flex-wrap container max-w-[1200px]">
+          <div className="flex flex-wrap max-w-[600px] gap-8">
+            <h1 className="text-4xl md:text-6xl font-bold">Effortless Web Hosting Starts Here</h1>
+            <p className="text-sm md:text-lg">Free Domain, Professional Email, and Privacy Protection included</p>
+            <Link href="/" className="px-5 py-3 bg-blue-500 hover:bg-blue-400">Get Started</Link>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
+      {/* Services */}
+      <div className="flex flex-wrap flex-col w-full justify-center items-center px-10 py-20 gap-4">
+        <h2 className="text-3xl font-bold">Our Services</h2>
+        <p className="text-slate-500 capitalize">Empower your online presence with blazing fast and secure web hosting!</p>
+        <div className="container max-w-[1000px] py-4 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 w-full flex-wrap justify-center gap-4 md:gap-0 my-10">
+            <div className="flex flex-col flex-wrap items-center text-center w-full p-2 capitalize gap-4">
+              <h4 className="font-bold text-xl text-slate-800">Shared Hosting</h4>
+              <p className="text-sm text-slate-500 line-clamp-2 max-w-[250px]">Fastest SSD based web hosting platform for your website</p>
+              <div className="flex flex-col gap-2 text-sm text-slate-500">
+                <p>single domain</p>
+                <p>one click installs</p>
+                <p>unlimited bandwidth</p>
+                <p>SSL certificate</p>
+              </div>
+            </div>
+             <div className="flex flex-col flex-wrap items-center text-center w-full p-2 capitalize gap-4">
+              <h4 className="font-bold text-xl text-slate-800">Shared Hosting</h4>
+              <p className="text-sm text-slate-500 line-clamp-2 max-w-[250px]">Fastest SSD based web hosting platform for your website</p>
+              <div className="flex flex-col gap-2 text-sm text-slate-500">
+                <p>single domain</p>
+                <p>one click installs</p>
+                <p>unlimited bandwidth</p>
+                <p>SSL certificate</p>
+              </div>
+            </div>
+             <div className="flex flex-col flex-wrap items-center text-center w-full p-2 capitalize gap-4">
+              <h4 className="font-bold text-xl text-slate-800">Shared Hosting</h4>
+              <p className="text-sm text-slate-500 line-clamp-2 max-w-[250px]">Fastest SSD based web hosting platform for your website</p>
+              <div className="flex flex-col gap-2 text-sm text-slate-500">
+                <p>single domain</p>
+                <p>one click installs</p>
+                <p>unlimited bandwidth</p>
+                <p>SSL certificate</p>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-wrap justify-start md:justify-center bg-slate-900 p-5 gap-8 mt-20">
+            <div className="flex gap-2 items-center ">
+              <FaCheckCircle className="text-blue-500"/>
+              <p className="text-white text-md">24/7 Customer Support</p>
+            </div>
+            <div className="flex gap-2 items-center ">
+              <FaCheckCircle className="text-blue-500"/>
+              <p className="text-white text-md">1-Click Install</p>
+            </div>
+            <div className="flex gap-2 items-center ">
+              <FaCheckCircle className="text-blue-500"/>
+              <p className="text-white text-md">99.9% Uptime Guarantee</p>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div>
+      {/* Why Choose Us */}
+      <div className="grid w-full grid-cols-1 lg:grid-cols-2">
+       <div className="flex flex-wrap lg:justify-end w-full bg-slate-200 py-15">
+         <div className="flex flex-col flex-wrap justify-center content-center px-10 max-w-[400px] gap-4">
+          <p className="text-blue-500 font-bold">Our Features</p>
+          <h4 className="text-slate-900 text-3xl font-bold">Why Choose Us?</h4>
+          <p className="text-gray-500 text-sm">Our web hosting solutions are an easy way to get a great website up and running, with so many robust features we throw in a domain, SSl Certificate, professional email address, and privacy protection for free.</p>
+          <Link href="/" className="text-slate-900 border border-slate-900 w-fit px-8 py-3 text-sm font-semibold hover:border-slate-600 hover:text-slate-600">Get Started Today!</Link>
+        </div>
+       </div>
+        <div className="w-full bg-slate-900 px-10 text-white">
+          <div className="flex flex-wrap flex-col justify-center gap-10 py-15">
+            <div className="flex items-center gap-6 w-full">
+              <div className="flex items-center border p-4 bg-white text-slate-900 "><MdOutlineTimer className="text-3xl"/></div>
+              <div className="flex flex-wrap max-w-[350px] gap-1.5">
+                <h5 className="font-semibold">99% Network Uptime</h5>
+                <p className="text-sm">At hosting maximum performance, we&apos;re dedicated to providing top tier soulutions tailored.</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-6 w-full">
+              <div className="flex items-center border p-4 bg-white text-slate-900 "><MdOutlineTimer className="text-3xl"/></div>
+              <div className="flex flex-wrap max-w-[350px] gap-1.5">
+                <h5 className="font-semibold">99% Network Uptime</h5>
+                <p className="text-sm">At hosting maximum performance, we&apos;re dedicated to providing top tier soulutions tailored.</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-6 w-full">
+              <div className="flex items-center border p-4 bg-white text-slate-900 "><MdOutlineTimer className="text-3xl"/></div>
+              <div className="flex flex-wrap max-w-[350px] gap-1.5">
+                <h5 className="font-semibold">99% Network Uptime</h5>
+                <p className="text-sm">At hosting maximum performance, we&apos;re dedicated to providing top tier soulutions tailored.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* Projects */}
+      <div className="flex flex-wrap flex-col w-full justify-center items-center px-10 py-20 gap-4">
+        <h2 className="text-3xl font-bold">Our Projects</h2>
+        <p className="text-slate-500 capitalize">Explore the projects that define our expertise.</p>
+      </div>
     </div>
   );
 }
